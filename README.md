@@ -39,4 +39,4 @@ Things to remembers:
     ```
 
     the bank_application UI should be working as expected.
-4. Added the bank_application_ui demo video [[bank_application_ui/bank_application_ui demo.mp4]]
+4. Added the bank_application_ui demo video. https://github.com/Michael679089/bank_application_ui/blob/main/bank_application_ui%20demo.mp4
