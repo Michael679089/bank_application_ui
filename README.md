@@ -1,16 +1,41 @@
-# bank_application
+# Welcome to my Bank Application with UI.
 
-A new Flutter project.
+This is a submodule git.
 
-## Getting Started
+Related to (MAIN REPO): https://github.com/Michael679089/CS319_Flutter-Application-Development
 
-This project is a starting point for a Flutter application.
+Things to remembers:
+1. main.dart is the DRIVER Class.
+2. bank_logic.dart holds all the variables.
 
-A few resources to get you started if this is your first Flutter project:
+# Updates:
+1. Separated the different pages into different files.
+2. Put all the pages in the "pages" folder.
+3. Currently the log_out function is crashing the application.
+    1. Alright I fixed the code. Basically I just did this:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    ```dart
+    void _logout(BuildContext context) {
+        // Reset global state
+        loggedIn = false;
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+        // Navigate back to the login/setup page and remove all previous routes
+        Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const PinSetupOrLoginPage()),
+        (route) => false,
+        );
+    }
+    ```
+
+    2. and then replaced the AppBar IconButton part with this:
+
+    ```dart
+    IconButton(
+        icon: const Icon(Icons.logout),
+        tooltip: "Logout",
+        onPressed: () => _logout(context),
+    ),
+    ```
+
+    the bank_application UI should be working as expected.
