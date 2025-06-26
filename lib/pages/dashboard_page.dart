@@ -11,7 +11,11 @@ class DashboardPage extends StatefulWidget {
 // ...move the rest of your _DashboardPageState code here...
 
 class _DashboardPageState extends State<DashboardPage> {
-  double money = 0.00; 
+  double money = 0.00;
+
+
+
+
   void _showAmountDialog(String title, Function(double) onSubmit) {
     final TextEditingController amountController = TextEditingController();
 
